@@ -59,7 +59,7 @@ async function run(){
             const options = { upsert : true };
             const updatedDoc = {
                 $set : {
-                    updatedNotes
+                    notes : updatedNotes.notes
                 }
             };
             const result = await todoCollection.updateOne(filter, updatedDoc, options);
